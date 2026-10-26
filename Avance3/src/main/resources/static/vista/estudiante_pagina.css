@@ -1,0 +1,61 @@
+.navbar{
+    background-color: rgb(15, 23, 42) !important;
+}
+
+.navbar-brand, .nav-link{
+    color: white !important;
+}
+
+body{
+    background-color: rgb(241, 245, 249);
+}
+
+/* Tarjeta blanca del perfil: ocupa el ancho disponible (hasta 1400px) y el contenido empieza arriba */
+.contenedor_perfil{
+    width: calc(100% - 32px);
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 25px;
+    background-color: white;
+}
+
+/* Columna izquierda: foto, nombre y datos */
+.col-md-3{
+    text-align: center;
+}
+
+.foto-perfil{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 12px;
+}
+
+/* Columna derecha: descripción, títulos y experiencia */
+.contenedor_perfil article h3{
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.contenedor_perfil table{
+    table-layout: fixed;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.contenedor_perfil th,
+.contenedor_perfil td{
+    overflow-wrap: anywhere;
+}
+
+@media (min-width: 768px){
+    /* Línea suave que separa los datos personales del resto */
+    .contenedor_perfil aside{
+        border-right: 1px solid #e9ecef;
+    }
+
+    .contenedor_perfil article{
+        padding-left: 32px;
+    }
+}

@@ -1,0 +1,149 @@
+:root {
+    --primario: 21, 96, 130;
+    --oscuro: 4, 36, 51;
+    --fondo: 241, 245, 249;
+}
+
+body {
+    background-color: rgb(var(--fondo));
+}
+
+.contenedor-postulaciones {
+    margin-top: 32px;
+    margin-bottom: 48px;
+}
+
+.titulo-pagina {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: rgb(var(--oscuro));
+    margin-bottom: 20px;
+}
+
+/* ---------- Tarjetas ---------- */
+.tarjeta {
+    background-color: white;
+    border-radius: 25px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, .08);
+}
+
+/* ---------- Resumen ---------- */
+.resumen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+}
+
+.resumen-numero {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: rgb(var(--oscuro));
+}
+
+.resumen-texto {
+    color: #6c757d;
+    font-size: .9rem;
+}
+
+.texto-activa {
+    color: rgb(var(--primario));
+}
+
+.texto-aceptado {
+    color: #198754;
+}
+
+.texto-rechazado {
+    color: #dc3545;
+}
+
+/* ---------- Postulación ---------- */
+.postulacion {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    background-color: white;
+    border-radius: 25px;
+    padding: 22px 24px;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, .08);
+}
+
+.postulacion-avatar {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: rgb(var(--primario));
+    color: white;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.postulacion-cuerpo {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.postulacion-puesto {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: rgb(var(--oscuro));
+    margin-bottom: 2px;
+    overflow-wrap: anywhere;
+}
+
+.postulacion-empresa {
+    color: rgb(var(--primario));
+    font-weight: 500;
+}
+
+.chip {
+    display: inline-block;
+    background-color: rgb(var(--fondo));
+    color: rgb(var(--oscuro));
+    border-radius: 999px;
+    padding: 4px 12px;
+    font-size: .85rem;
+}
+
+/* ---------- Estado ---------- */
+.estado {
+    min-width: 110px;
+    text-align: center;
+    border-radius: 999px;
+    padding: 8px 16px;
+    font-weight: 600;
+    font-size: .9rem;
+    white-space: nowrap;
+}
+
+.estado-activa {
+    background-color: rgba(var(--primario), .14);
+    color: rgb(var(--primario));
+}
+
+.estado-aceptado {
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+.estado-rechazado {
+    background-color: #f8d7da;
+    color: #842029;
+}
+
+.tarjeta a {
+    color: rgb(var(--primario));
+}
+
+@media (max-width: 575.98px) {
+    .postulacion {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

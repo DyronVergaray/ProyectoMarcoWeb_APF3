@@ -1,0 +1,114 @@
+<!-- Menu de navegacion -->
+<nav class="navbar navbar-dark px-4 navbar-custom">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+        <button class="navbar-toggler border-0 shadow-none p-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#menuLateral" aria-expanded="false" aria-controls="menuLateral" aria-label="Abrir menú">
+            <img src="img/logo.png" alt="Menú" width="35" height="35">
+        </button>
+
+        <div class="d-flex align-items-center gap-2">
+
+            <!-- Boton Notificaciones -->
+            <button type="button" class="btn btn-icon-navbar rounded-circle position-relative p-2"
+                data-bs-toggle="modal" data-bs-target="#modalNotificaciones" title="Notificaciones">
+                🔔
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    3
+                </span>
+            </button>
+
+            <!-- Boton Mensajes -->
+            <button type="button" class="btn btn-icon-navbar rounded-circle position-relative p-2"
+                data-bs-toggle="modal" data-bs-target="#modalMensajes" title="Mensajes">
+                ✉️
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    2
+                </span>
+            </button>
+
+            <a href="perfil.html" class="d-flex align-items-center text-white text-decoration-none ms-3">
+                <img src="img/Prueba.png" alt="Perfil" class="rounded-circle" width="40" height="40"
+                    style="object-fit: cover;">
+                <span class="ms-2" id="navbar-nombre">Empresa</span>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- Modal Notificaciones -->
+<div class="modal fade" id="modalNotificaciones" tabindex="-1" aria-labelledby="modalNotificacionesLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header card-header-custom">
+                <h1 class="modal-title fs-5" id="modalNotificacionesLabel">Notificaciones</h1>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0">
+                <ul class="list-group list-group-flush lista-noti">
+                    <li class="list-group-item">
+                        <span class="noti-punto bg-danger"></span>
+                        <div>
+                            <p class="mb-0 fw-medium">Vacante por vencer</p>
+                            <small class="text-secondary">"Programador Backend" cierra en 2 días</small>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <span class="noti-punto bg-warning"></span>
+                        <div>
+                            <p class="mb-0 fw-medium">Entrevista pendiente de confirmar</p>
+                            <small class="text-secondary">Candidato: Ana Torres — mañana 10:00 a.m.</small>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <span class="noti-punto bg-success"></span>
+                        <div>
+                            <p class="mb-0 fw-medium">Nuevo candidato</p>
+                            <small class="text-secondary">Se postuló a "Diseñador UX/UI"</small>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Mensajes -->
+<div class="modal fade" id="modalMensajes" tabindex="-1" aria-labelledby="modalMensajesLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header card-header-custom">
+                <h1 class="modal-title fs-5" id="modalMensajesLabel">Mensajes</h1>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0">
+                <ul class="list-group list-group-flush lista-noti">
+                    <li class="list-group-item">
+                        <img src="img/Prueba.png" class="rounded-circle" width="45" height="45"
+                            style="object-fit: cover;">
+                        <div>
+                            <p class="mb-0 fw-medium">Ana Torres</p>
+                            <small class="text-secondary">¿A qué hora es la entrevista del jueves?</small>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <img src="img/Prueba.png" class="rounded-circle" width="45" height="45"
+                            style="object-fit: cover;">
+                        <div>
+                            <p class="mb-0 fw-medium">Luis Ramírez</p>
+                            <small class="text-secondary">Envié mi CV actualizado, gracias.</small>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>

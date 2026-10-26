@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar trabajo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="icon" href="img/logo_empleate.jpg">
+    <link rel="stylesheet" href="vista/nav.css">
+    <link rel="stylesheet" href="vista/buscar_trabajo.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <img class="logo_empleate" src="img/logo_empleate.jpg">
+            <a class="navbar-brand">Empleate</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="estudiante.html">Tu Pagina</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="buscar_trabajo.html">Buscar Trabajo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="configurar_perfil.html">Configuración de perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="titulos_experiencia.html">Títulos y experiencia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="postulaciones.html">Mis postulaciones</a>
+                    </li>
+                </ul>
+                <div class="d-flex gap-3">
+
+                    <!-- Botón Notificación -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#modalNotificaciones">
+                        Notificación
+                    </button>
+
+                    <!-- Modal Notificación -->
+                    <div class="modal fade" id="modalNotificaciones" tabindex="-1"
+                        aria-labelledby="modalNotificacionesLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="modalNotificacionesLabel">Notificaciones</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img class="noti_perfil" src="img/alerta_roja.png">
+                                    <p class="noti_msg">Emergencia</p>
+                                </div>
+                                <div class="modal-body">
+                                    <img class="noti_perfil" src="img/alerta_amarilla.jpg">
+                                    <p class="noti_msg">Alerta</p>
+                                </div>
+                                <div class="modal-body">
+                                    <img class="noti_perfil" src="img/alerta_verde.png">
+                                    <p class="noti_msg">Pasaste de fase en tu postulación de panadero nuclear</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botón Mensajes -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#modalMensajes">
+                        Mensajes
+                    </button>
+
+                    <!-- Modal Mensajes -->
+                    <div class="modal fade" id="modalMensajes" tabindex="-1" aria-labelledby="modalMensajesLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="modalMensajesLabel">Mensajes</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img class="noti_perfil rounded-circle" src="img/notiper1.jpg">
+                                    <p class="noti_msg">Pepito te envio una imagen</p>
+                                </div>
+                                <div class="modal-body">
+                                    <img class="noti_perfil rounded-circle" src="img/notiper2.png">
+                                    <p class="noti_msg">Mbappe te envio una imagen</p>
+                                </div>
+                                <div class="modal-body">
+                                    <img class="noti_perfil rounded-circle" src="img/notiper3.png">
+                                    <p class="noti_msg">Fufu te envio una imagen</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botón Cerrar sesión -->
+                    <button type="button" class="btn btn-outline-light" id="btnCerrarSesion">Cerrar sesión</button>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-xl contenedor-busqueda">
+        <div class="row g-4">
+
+            <!-- Filtros -->
+            <aside class="col-12 col-lg-3">
+                <div class="tarjeta filtros">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h2 class="titulo-filtros mb-0">Filtros</h2>
+                        <button type="button" class="btn btn-link btn-sm p-0" id="btnLimpiar">Limpiar</button>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="filtroEmpresa" class="form-label">Empresa</label>
+                        <select class="form-select" id="filtroEmpresa">
+                            <option value="">Todas</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="filtroEstado" class="form-label">Estado de la oferta</label>
+                        <select class="form-select" id="filtroEstado">
+                            <option value="">Todos</option>
+                            <option value="Activa">Activa (recibe postulaciones)</option>
+                            <option value="En Proceso">En Proceso</option>
+                            <option value="Finalizada">Finalizada</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="filtroFrecuencia" class="form-label">Frecuencia de pagos</label>
+                        <select class="form-select" id="filtroFrecuencia">
+                            <option value="">Todas</option>
+                            <option value="Semanal">Semanal</option>
+                            <option value="Quincenal">Quincenal</option>
+                            <option value="Mensual">Mensual</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Sueldo (S/)</label>
+                        <div class="row g-2">
+                            <div class="col-6">
+                                <input type="number" class="form-control" id="filtroSueldoMin" min="0" step="50"
+                                    placeholder="Mínimo" aria-label="Sueldo mínimo">
+                            </div>
+                            <div class="col-6">
+                                <input type="number" class="form-control" id="filtroSueldoMax" min="0" step="50"
+                                    placeholder="Máximo" aria-label="Sueldo máximo">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="filtroHoras" class="form-label">Horas semanales</label>
+                        <select class="form-select" id="filtroHoras">
+                            <option value="">Todas</option>
+                            <option value="1-20">Hasta 20 horas</option>
+                            <option value="21-30">De 21 a 30 horas</option>
+                            <option value="31-40">De 31 a 40 horas</option>
+                            <option value="41-168">Más de 40 horas</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="filtroSeguro" class="form-label">Seguro de vida</label>
+                        <select class="form-select" id="filtroSeguro">
+                            <option value="">Indiferente</option>
+                            <option value="Sí">Con seguro de vida</option>
+                            <option value="No">Sin seguro de vida</option>
+                        </select>
+                    </div>
+
+                    <div class="form-check mb-0">
+                        <input class="form-check-input" type="checkbox" id="filtroBonos">
+                        <label class="form-check-label" for="filtroBonos">Solo ofertas con bonos</label>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Resultados -->
+            <main class="col-12 col-lg-9">
+
+                <!-- Buscador por puesto -->
+                <form class="tarjeta buscador" id="formBuscar" role="search">
+                    <div class="input-group">
+                        <input type="search" class="form-control" id="buscarPuesto"
+                            placeholder="Buscar por puesto (ej: practicante, desarrollador...)"
+                            aria-label="Buscar por puesto" autocomplete="off">
+                        <button class="btn btn-primario" type="submit">Buscar</button>
+                    </div>
+                </form>
+
+                <div class="d-flex justify-content-between align-items-center my-3 px-2">
+                    <h1 class="titulo-resultados mb-0">Ofertas de trabajo</h1>
+                    <span class="text-secondary" id="contador"></span>
+                </div>
+
+                <div id="mensaje" class="alert d-none" role="alert"></div>
+
+                <!-- Se llena desde buscar_trabajo.js -->
+                <div class="d-flex flex-column gap-3" id="listaOfertas">
+                    <div class="tarjeta text-center text-secondary">Cargando ofertas...</div>
+                </div>
+            </main>
+
+        </div>
+    </div>
+
+    <!-- Detalle de una oferta (se llena desde buscar_trabajo.js) -->
+    <div class="modal fade" id="modalOferta" tabindex="-1" aria-labelledby="modalOfertaTitulo" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header encabezado-modal">
+                    <div>
+                        <h1 class="modal-title fs-5" id="modalOfertaTitulo"></h1>
+                        <small id="modalOfertaEmpresa"></small>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body" id="modalOfertaCuerpo"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primario" id="btnPostularModal">Postular</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="controlador/buscar_trabajo.js"></script>
+</body>
+
+</html>

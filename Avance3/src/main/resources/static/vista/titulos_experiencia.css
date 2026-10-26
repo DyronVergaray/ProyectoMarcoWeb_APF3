@@ -1,0 +1,20 @@
+.contenedor-secciones{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.tarjeta{
+    background-color: white;
+    border-radius: 25px;
+    padding: 30px;
+}
+
+.tarjeta .btn-primary{
+    background-color: rgb(21, 96, 130);
+    border-color: rgb(21, 96, 130);
+}
+
+.tarjeta .btn-primary:hover{
+    background-color: rgb(4, 36, 51);
+    border-color: rgb(4, 36, 51);
+}

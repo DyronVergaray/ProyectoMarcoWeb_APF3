@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear empresa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="vista/registro_empresa.css">
+    <link rel="icon" href="img/logo_empleate.jpg">
+</head>
+
+<body>
+    <div class="cuadro_registro">
+        <h1 class="text-center">Crear empresa</h1>
+
+        <form id="formRegistroEmpresa" novalidate>
+
+            <h2 class="titulo-seccion">Datos de la empresa</h2>
+            <div class="row g-3">
+                <div class="col-12">
+                    <label for="nombreEmpresa" class="form-label">Nombre de la empresa</label>
+                    <input type="text" class="form-control" id="nombreEmpresa" maxlength="150" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="rubro" class="form-label">Rubro</label>
+                    <input type="text" class="form-control" id="rubro" maxlength="100" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="ruc" class="form-label">RUC</label>
+                    <input type="text" class="form-control" id="ruc" maxlength="11" inputmode="numeric"
+                        pattern="\d{11}" required>
+                </div>
+            </div>
+
+            <h2 class="titulo-seccion">Contacto de la empresa</h2>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label for="telefono" class="form-label">Teléfono</label>
+                    <input type="tel" class="form-control" id="telefono" maxlength="15" inputmode="numeric"
+                        pattern="\d{7,15}" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="correoEmpresarial" class="form-label">Correo empresarial</label>
+                    <input type="email" class="form-control" id="correoEmpresarial" maxlength="150" required>
+                </div>
+                <div class="col-12">
+                    <label for="redesSociales" class="form-label">Redes sociales <span
+                            class="text-muted">(opcional)</span></label>
+                    <input type="text" class="form-control" id="redesSociales" maxlength="255"
+                        placeholder="Enlace o usuario de tus redes">
+                </div>
+            </div>
+
+            <h2 class="titulo-seccion">Usuario administrador</h2>
+            <div class="row g-3">
+                <div class="col-12">
+                    <label for="nombreUsuario" class="form-label">Nombres</label>
+                    <input type="text" class="form-control" id="nombreUsuario" maxlength="100" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="apellidoPUsuario" class="form-label">Apellido paterno</label>
+                    <input type="text" class="form-control" id="apellidoPUsuario" maxlength="100" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="apellidoMUsuario" class="form-label">Apellido materno</label>
+                    <input type="text" class="form-control" id="apellidoMUsuario" maxlength="100" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="dni" class="form-label">DNI</label>
+                    <input type="text" class="form-control" id="dni" maxlength="8" inputmode="numeric"
+                        pattern="\d{8}" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="correo" class="form-label">Correo</label>
+                    <input type="email" class="form-control" id="correo" maxlength="150" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="contrasena" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="contrasena" minlength="6" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="confirmarContrasena" class="form-label">Confirmar contraseña</label>
+                    <input type="password" class="form-control" id="confirmarContrasena" minlength="6" required>
+                </div>
+            </div>
+
+            <div id="mensaje" class="alert d-none mt-4 mb-0" role="alert"></div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary" id="btnRegistrar">Crear empresa</button>
+                <p class="enlace-sesion">¿Ya tienes cuenta? <a href="index.html">Inicia sesión</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script src="controlador/registro_empresa.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

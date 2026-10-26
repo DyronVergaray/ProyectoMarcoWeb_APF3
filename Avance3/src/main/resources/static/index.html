@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="vista/inicio_sesion.css">
+    <link rel="icon" href="img/logo_empleate.jpg">
+</head>
+
+<body>
+    <a href="estudiante.html">Redirección a estudiante HTML</a>
+    <a href="panelGeneralEmp.html">Redirección a empresa HTML</a>
+    <div class="cuadro_inicio_sesion">
+        <h1>Inicio de Sesion</h1>
+        <form>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Correo</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="inicio_sesion()">Iniciar Sesion</button>
+            <p class="error" id="error"></p>
+            <p>¿No tienes cuenta? <a href="registro_estudiante.html">Regístrate</a></p>
+            <p>¿Eres una empresa? <a href="registro_empresa.html">Crear Empresa</a></p>
+        </form>
+    </div>
+
+    <script src="controlador/inicio_sesion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

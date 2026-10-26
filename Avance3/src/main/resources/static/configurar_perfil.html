@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurando perfil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="icon" href="img/logo_empleate.jpg">
+    <link rel="stylesheet" href="vista/nav.css">
+    <link rel="stylesheet" href="vista/configurar_perfil.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <img class="logo_empleate" src="img/logo_empleate.jpg">
+            <a class="navbar-brand">Empleate</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="estudiante.html">Tu Pagina</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="buscar_trabajo.html">Buscar Trabajo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="configurar_perfil.html">Configuración de perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="titulos_experiencia.html">Títulos y experiencia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="postulaciones.html">Mis postulaciones</a>
+                    </li>
+                </ul>
+                <div class="d-flex gap-3">
+
+                    <!-- Botón Notificación -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#modalNotificaciones">
+                        Notificación
+                    </button>
+
+                    <!-- Modal Notificación -->
+                    <div class="modal fade" id="modalNotificaciones" tabindex="-1"
+                        aria-labelledby="modalNotificacionesLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="modalNotificacionesLabel">Notificaciones</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img class="noti_perfil" src="img/alerta_roja.png">
+                                    <p class="noti_msg">Emergencia</p>
+                                </div>
+                                <div class="modal-body">
+                                    <img class="noti_perfil" src="img/alerta_amarilla.jpg">
+                                    <p class="noti_msg">Alerta</p>
+                                </div>
+                                <div class="modal-body">
+                                    <img class="noti_perfil" src="img/alerta_verde.png">
+                                    <p class="noti_msg">Pasaste de fase en tu postulación de panadero nuclear</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botón Mensajes -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#modalMensajes">
+                        Mensajes
+                    </button>
+
+                    <!-- Modal Mensajes -->
+                    <div class="modal fade" id="modalMensajes" tabindex="-1" aria-labelledby="modalMensajesLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="modalMensajesLabel">Mensajes</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img class="noti_perfil rounded-circle" src="img/notiper1.jpg">
+                                    <p class="noti_msg">Pepito te envio una imagen</p>
+                                </div>
+                                <div class="modal-body">
+                                    <img class="noti_perfil rounded-circle" src="img/notiper2.png">
+                                    <p class="noti_msg">Mbappe te envio una imagen</p>
+                                </div>
+                                <div class="modal-body">
+                                    <img class="noti_perfil rounded-circle" src="img/notiper3.png">
+                                    <p class="noti_msg">Fufu te envio una imagen</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botón Cerrar sesión -->
+                    <button type="button" class="btn btn-outline-light" id="btnCerrarSesion">Cerrar sesión</button>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="cuadrado_base">
+
+        <div class="contenedor">
+            <div class="container mt-5" style="max-width: 600px;">
+                <h4 class="mb-4">Configurador de Perfil</h4>
+
+                <div id="mensaje" class="alert d-none" role="alert"></div>
+
+                <div class="mb-3">
+                    <p class="mb-1 fw-bold">Nombres</p>
+                    <div class="input-group">
+                        <input type="text" class="form-control campo-editable" id="nombreEstudiante" maxlength="100" disabled>
+                        <button class="btn btn-outline-primary btn-toggle" type="button">Cambiar</button>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <p class="mb-1 fw-bold">Apellido paterno</p>
+                    <div class="input-group">
+                        <input type="text" class="form-control campo-editable" id="apellidoPEstudiante" maxlength="100" disabled>
+                        <button class="btn btn-outline-primary btn-toggle" type="button">Cambiar</button>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <p class="mb-1 fw-bold">Apellido materno</p>
+                    <div class="input-group">
+                        <input type="text" class="form-control campo-editable" id="apellidoMEstudiante" maxlength="100" disabled>
+                        <button class="btn btn-outline-primary btn-toggle" type="button">Cambiar</button>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <p class="mb-1 fw-bold">DNI</p>
+                    <div class="input-group">
+                        <input type="text" class="form-control campo-editable" id="dni" maxlength="8" inputmode="numeric" disabled>
+                        <button class="btn btn-outline-primary btn-toggle" type="button">Cambiar</button>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <p class="mb-1 fw-bold">Correo electrónico</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control campo-editable" id="correo" maxlength="150" disabled>
+                        <button class="btn btn-outline-primary btn-toggle" type="button">Cambiar</button>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <p class="mb-1 fw-bold">Teléfono</p>
+                    <div class="input-group">
+                        <input type="tel" class="form-control campo-editable" id="telefono" maxlength="15" inputmode="numeric" disabled>
+                        <button class="btn btn-outline-primary btn-toggle" type="button">Cambiar</button>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <p class="mb-1 fw-bold">Nivel educativo</p>
+                    <div class="input-group">
+                        <select class="form-select campo-editable" id="nivelEducativo" disabled>
+                            <option>Secundaria completa</option>
+                            <option>Técnico (en curso)</option>
+                            <option>Técnico (egresado)</option>
+                            <option>Universitario (en curso)</option>
+                            <option>Universitario (egresado)</option>
+                            <option>Bachiller</option>
+                            <option>Titulado</option>
+                        </select>
+                        <button class="btn btn-outline-primary btn-toggle" type="button">Cambiar</button>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <p class="mb-1 fw-bold">Descripción / Sobre mí</p>
+                    <div class="input-group">
+                        <textarea class="form-control campo-editable" id="descripcion" rows="3" disabled></textarea>
+                        <button class="btn btn-outline-primary btn-toggle" type="button">Cambiar</button>
+                    </div>
+                </div>
+
+                <hr class="my-4">
+                <div class="d-grid">
+                    <a href="titulos_experiencia.html" class="btn btn-primary">Agregar títulos y experiencia laboral</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="controlador/configurar_perfil.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

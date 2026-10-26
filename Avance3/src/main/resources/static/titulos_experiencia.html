@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Títulos y experiencia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="icon" href="img/logo_empleate.jpg">
+    <link rel="stylesheet" href="vista/nav.css">
+    <link rel="stylesheet" href="vista/titulos_experiencia.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <img class="logo_empleate" src="img/logo_empleate.jpg">
+            <a class="navbar-brand">Empleate</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="estudiante.html">Tu Pagina</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="buscar_trabajo.html">Buscar Trabajo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="configurar_perfil.html">Configuración de perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="titulos_experiencia.html">Títulos y experiencia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="postulaciones.html">Mis postulaciones</a>
+                    </li>
+                </ul>
+                <div class="d-flex gap-3">
+
+                    <!-- Botón Notificación -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#modalNotificaciones">
+                        Notificación
+                    </button>
+
+                    <!-- Modal Notificación -->
+                    <div class="modal fade" id="modalNotificaciones" tabindex="-1"
+                        aria-labelledby="modalNotificacionesLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="modalNotificacionesLabel">Notificaciones</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img class="noti_perfil" src="img/alerta_roja.png">
+                                    <p class="noti_msg">Emergencia</p>
+                                </div>
+                                <div class="modal-body">
+                                    <img class="noti_perfil" src="img/alerta_amarilla.jpg">
+                                    <p class="noti_msg">Alerta</p>
+                                </div>
+                                <div class="modal-body">
+                                    <img class="noti_perfil" src="img/alerta_verde.png">
+                                    <p class="noti_msg">Pasaste de fase en tu postulación de panadero nuclear</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botón Mensajes -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#modalMensajes">
+                        Mensajes
+                    </button>
+
+                    <!-- Modal Mensajes -->
+                    <div class="modal fade" id="modalMensajes" tabindex="-1" aria-labelledby="modalMensajesLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="modalMensajesLabel">Mensajes</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img class="noti_perfil rounded-circle" src="img/notiper1.jpg">
+                                    <p class="noti_msg">Pepito te envio una imagen</p>
+                                </div>
+                                <div class="modal-body">
+                                    <img class="noti_perfil rounded-circle" src="img/notiper2.png">
+                                    <p class="noti_msg">Mbappe te envio una imagen</p>
+                                </div>
+                                <div class="modal-body">
+                                    <img class="noti_perfil rounded-circle" src="img/notiper3.png">
+                                    <p class="noti_msg">Fufu te envio una imagen</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botón Cerrar sesión -->
+                    <button type="button" class="btn btn-outline-light" id="btnCerrarSesion">Cerrar sesión</button>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container contenedor-secciones">
+        <div class="row g-4">
+
+            <!-- Títulos -->
+            <section class="col-lg-6">
+                <div class="tarjeta">
+                    <h4 class="mb-4">Títulos</h4>
+
+                    <form id="formTitulo" novalidate>
+                        <div class="mb-3">
+                            <label for="tituloEntidad" class="form-label fw-bold">Entidad</label>
+                            <input type="text" class="form-control" id="tituloEntidad" maxlength="150"
+                                placeholder="Ej: Google, UTP" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="tituloNombre" class="form-label fw-bold">Nombre del título</label>
+                            <input type="text" class="form-control" id="tituloNombre" maxlength="150"
+                                placeholder="Ej: Cloud Camp" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="tituloDescargable" class="form-label fw-bold">Enlace de descarga
+                                <span class="fw-normal text-muted">(opcional)</span></label>
+                            <input type="url" class="form-control" id="tituloDescargable" maxlength="255"
+                                placeholder="https://...">
+                        </div>
+                        <div id="mensajeTitulo" class="alert d-none" role="alert"></div>
+                        <button type="submit" class="btn btn-primary">Agregar título</button>
+                    </form>
+
+                    <hr class="my-4">
+                    <ul class="list-group" id="listaTitulos"></ul>
+                </div>
+            </section>
+
+            <!-- Experiencia laboral -->
+            <section class="col-lg-6">
+                <div class="tarjeta">
+                    <h4 class="mb-4">Experiencia laboral</h4>
+
+                    <form id="formExperiencia" novalidate>
+                        <div class="mb-3">
+                            <label for="experienciaEntidad" class="form-label fw-bold">Entidad</label>
+                            <input type="text" class="form-control" id="experienciaEntidad" maxlength="150"
+                                placeholder="Ej: BBVA" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="experienciaPuesto" class="form-label fw-bold">Puesto</label>
+                            <input type="text" class="form-control" id="experienciaPuesto" maxlength="100"
+                                placeholder="Ej: Software Developer" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="experienciaPeriodo" class="form-label fw-bold">Periodo</label>
+                            <input type="text" class="form-control" id="experienciaPeriodo" maxlength="100"
+                                placeholder="Ej: 2021 - 2025" required>
+                        </div>
+                        <div id="mensajeExperiencia" class="alert d-none" role="alert"></div>
+                        <button type="submit" class="btn btn-primary">Agregar experiencia</button>
+                    </form>
+
+                    <hr class="my-4">
+                    <ul class="list-group" id="listaExperiencias"></ul>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    <script src="controlador/titulos_experiencia.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

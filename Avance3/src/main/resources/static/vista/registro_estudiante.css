@@ -1,0 +1,52 @@
+/* Mismo estilo que inicio_sesion.css, pero con alto flexible por tener más campos */
+body {
+    background-color: rgb(241, 245, 249);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 12px;
+}
+
+.cuadro_registro {
+    background-color: white;
+    color: black;
+    width: 100%;
+    max-width: 620px;
+    border-radius: 25px;
+    padding: 40px;
+}
+
+.cuadro_registro h1 {
+    font-size: 1.8rem;
+    margin-bottom: 28px;
+}
+
+.btn-primary {
+    background-color: rgb(21, 96, 130);
+    border-color: rgb(21, 96, 130);
+    margin-top: 24px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.btn-primary:hover {
+    background-color: rgb(4, 36, 51);
+    border-color: rgb(4, 36, 51);
+}
+
+.enlace-sesion {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+a {
+    color: rgb(21, 96, 130);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

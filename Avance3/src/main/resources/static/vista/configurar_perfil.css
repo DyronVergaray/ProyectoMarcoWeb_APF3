@@ -1,0 +1,38 @@
+.cuadrado_base{
+    display: flex;
+    width: 100%;
+    max-width: 1700px;
+    min-height: 600px;
+    margin: 80px auto 0;
+    padding: 0 20px;
+}
+
+.contenedor{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 25px;
+    padding-bottom: 40px;
+    background-color: white;
+}
+
+/* Tablet y móvil */
+@media (max-width: 768px){
+    .cuadrado_base{
+        margin-top: 30px;
+        padding: 0 12px;
+    }
+
+    .contenedor{
+        border-radius: 15px;
+        padding-bottom: 24px;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px){
+    .cuadrado_base{
+        margin-top: 15px;
+        padding: 0 8px;
+    }
+}

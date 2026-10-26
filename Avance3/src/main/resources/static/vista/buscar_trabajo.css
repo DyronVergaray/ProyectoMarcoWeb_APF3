@@ -1,0 +1,191 @@
+:root {
+    --primario: 21, 96, 130;
+    --oscuro: 4, 36, 51;
+    --fondo: 241, 245, 249;
+}
+
+body {
+    background-color: rgb(var(--fondo));
+}
+
+.contenedor-busqueda {
+    margin-top: 32px;
+    margin-bottom: 48px;
+}
+
+/* ---------- Tarjetas ---------- */
+.tarjeta {
+    background-color: white;
+    border-radius: 25px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, .08);
+}
+
+.btn-primario {
+    background-color: rgb(var(--primario));
+    border-color: rgb(var(--primario));
+    color: white;
+}
+
+.btn-primario:hover {
+    background-color: rgb(var(--oscuro));
+    border-color: rgb(var(--oscuro));
+    color: white;
+}
+
+/* ---------- Filtros ---------- */
+.filtros {
+    position: sticky;
+    top: 20px;
+}
+
+.titulo-filtros,
+.titulo-resultados {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: rgb(var(--oscuro));
+}
+
+.filtros .form-label {
+    font-weight: 600;
+    font-size: .9rem;
+    color: rgb(var(--oscuro));
+}
+
+.filtros .btn-link,
+.oferta a {
+    color: rgb(var(--primario));
+}
+
+/* ---------- Buscador ---------- */
+.buscador {
+    padding: 16px;
+}
+
+/* ---------- Oferta ---------- */
+.oferta {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    background-color: white;
+    border-radius: 25px;
+    padding: 22px 24px;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, .08);
+    transition: box-shadow .15s ease, transform .15s ease;
+}
+
+.oferta:hover {
+    box-shadow: 0 6px 18px rgba(15, 23, 42, .12);
+    transform: translateY(-2px);
+}
+
+.oferta-avatar {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: rgb(var(--primario));
+    color: white;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.oferta-cuerpo {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.oferta-puesto {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: rgb(var(--oscuro));
+    margin-bottom: 2px;
+    overflow-wrap: anywhere;
+}
+
+.oferta-empresa {
+    color: rgb(var(--primario));
+    font-weight: 500;
+}
+
+.chip {
+    display: inline-block;
+    background-color: rgb(var(--fondo));
+    color: rgb(var(--oscuro));
+    border-radius: 999px;
+    padding: 4px 12px;
+    font-size: .85rem;
+}
+
+.chip-sueldo {
+    background-color: rgba(var(--primario), .12);
+    font-weight: 600;
+}
+
+.oferta-fecha {
+    font-size: .85rem;
+}
+
+.oferta-botones {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-self: center;
+    min-width: 130px;
+}
+
+.btn-primario:disabled {
+    background-color: rgb(var(--primario));
+    border-color: rgb(var(--primario));
+    opacity: .6;
+}
+
+/* ---------- Estado de la oferta ---------- */
+.estado-oferta {
+    border-radius: 999px;
+    padding: 2px 10px;
+    font-size: .75rem;
+    font-weight: 600;
+}
+
+.estado-activa {
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+.estado-en-proceso {
+    background-color: #fff3cd;
+    color: #664d03;
+}
+
+.estado-finalizada {
+    background-color: #e2e3e5;
+    color: #41464b;
+}
+
+/* ---------- Detalle (modal) ---------- */
+.encabezado-modal {
+    background-color: rgb(var(--primario));
+    color: white;
+}
+
+/* nav.css pone display:flex a .modal-body (para las notificaciones); aquí no se quiere */
+#modalOferta .modal-body {
+    display: block;
+}
+
+#modalOferta dt {
+    color: rgb(var(--primario));
+}
+
+@media (max-width: 575.98px) {
+    .oferta {
+        flex-direction: column;
+    }
+
+    .oferta-botones {
+        align-self: stretch;
+    }
+}

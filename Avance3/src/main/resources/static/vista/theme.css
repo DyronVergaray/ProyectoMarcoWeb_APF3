@@ -1,0 +1,117 @@
+
+/* Colores predefinidos */
+:root {
+  /* fondos claros, texto sobre oscuro */
+  --color-blanco:  255, 255, 255;
+  
+  /* texto fuerte / hover oscuro */
+  --color-oscuro:  4, 36, 51;
+  
+  /* color de marca: botones, links activos */
+  --color-primario: 21, 96, 130;  
+
+  /* fondo general de la pagina */
+  --color-gris-claro: 241, 245, 249;
+
+  /* navbar / franjas oscuras */ 
+  --color-navy: 15, 23, 42;         
+}
+
+body {
+  background-color: rgb(var(--color-gris-claro));
+}
+
+/* Navbar */
+.navbar-custom {
+  background-color: rgb(var(--color-navy));
+}
+
+/* Sidebar */
+.sidebar-custom {
+  background-color: rgb(var(--color-blanco));
+}
+
+.sidebar-link {
+  color: rgb(var(--color-oscuro));
+  background-color: transparent;
+  text-align: left;
+  transition: background-color .15s ease, color .15s ease, text-align .15s ease;
+}
+
+.sidebar-link:hover {
+  background-color: rgb(var(--color-primario));
+  color: rgb(var(--color-blanco));
+  text-align: center;
+}
+
+
+/* el link de "Cerrar sesión" mantiene su color rojo, solo cambia el fondo en hover */
+.sidebar-link.text-danger:hover {
+  background-color: #f8d7da;
+  color: #dc3545;
+}
+
+/*  Botones y acentos de marca */
+.btn-custom-primary {
+  background-color: rgb(var(--color-primario));
+  color: rgb(var(--color-blanco));
+  border: none;
+}
+
+/* Apariencia del botón cuando el cursor pasa sobre él */
+.btn-custom-primary:hover {
+  background-color: rgb(var(--color-oscuro));
+  color: rgb(var(--color-blanco));
+}
+
+.text-custom-primary {
+  color: rgb(var(--color-primario));
+}
+
+.bg-custom-primary {
+  background-color: rgb(var(--color-primario));
+}
+
+.bg-custom-oscuro {
+  background-color: rgb(var(--color-oscuro));
+}
+
+.card-header-custom {
+  background-color: rgb(var(--color-primario));
+  color: rgb(var(--color-blanco));
+}
+
+/* Notificaciones y mensajes en el navbar */
+.btn-icon-navbar {
+  background-color: transparent;
+  border: 1px solid rgba(var(--color-blanco), .25);
+  color: rgb(var(--color-blanco));
+}
+
+.btn-icon-navbar:hover {
+  background-color: rgb(var(--color-primario));
+  border-color: rgb(var(--color-primario));
+  color: rgb(var(--color-blanco));
+}
+
+.lista-noti .list-group-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-left: none;
+  border-right: none;
+}
+
+.noti-punto {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Campos editables (Configuración) */
+.campo-editable:disabled {
+  background-color: rgb(var(--color-gris-claro));
+  color: rgb(var(--color-oscuro));
+  opacity: 1;
+}
